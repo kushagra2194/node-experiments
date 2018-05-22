@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    script(type='text/javascript').
+      if (foo) bar(1 + 5)
+  body
+    h1 Pug - node template engine
+    #container.col
+      if youAreUsingPug
+        p You are amazing
+      else
+        p You are amazing
+        |
+        |
+        p Get on it!
+        a(href='google.com') Google
+        |
+        |
+        #container.col Google
+        |
+        |
+        a(class='button', href='google.com') Google
+      p Pug is a terse and simple templating language with a 
+        strong focus on performance and powerful features.
+        span hello
+
+
+- var kushagra = 0
+case kushagra
+  when 0
+    - break
+  when 1
+    - break
+  when 2
+    - break
+  default
+    p kushagra
+
+- var friends = 1
+case friends
+  when 0
+    - break
+  when 1
+    p you have very few friends
+    - break
+  default
+    p you have #{friends} friends
+
+
+- for (var x = 0; x < 3; x++)
+  li #{x} list
